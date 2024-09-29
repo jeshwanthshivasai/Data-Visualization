@@ -1,23 +1,23 @@
 /*
-You want your code to execute only once your page has finished loading. 
-For that purpose, you can attach a JavaScript event to the document called DOMContentLoaded. 
-Here's the code that does this:
-    document.addEventListener('DOMContentLoaded', function() {
+When the click event happens, you can use JavaScript to update an HTML element.
 
-    });
-You can implement event handlers that go inside of the DOMContentLoaded function.
-You can implement an onclick event handler which triggers when the user clicks on the #getMessage element, by adding the following code:
-    document.getElementById('getMessage').onclick = function(){};
+For example, when a user clicks the Get Message button, it changes the text of the element with the class message to say Here is the message.
+
+This works by adding the following code within the click event:
+
+document.getElementsByClassName('message')[0].textContent="Here is the message";
 */
 
 /*
 
 <script>
     document.addEventListener('DOMContentLoaded', function(){
+    document.getElementById('getMessage').onclick = function(){};
 
     // Add your code below this line
-    document.getElementById('getMessage').onclick = function(){};
+    document.getElementsByClassName('message')[0].textContent = "Here is the message";
     // Add your code above this line
+
   });
 </script>
 
